@@ -16,7 +16,7 @@ CORRECT_ANSWERS = [0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1]
 # --- FONCTION DE TRAITEMENT OMR ---
 def process_omr_sheet(image_bytes):
     # Conversion de l'image pour OpenCV
-    file_bytes = np.asarray(bytearray(image_bytes), dtype=np.uint8)
+    file_bytes = np.asarray(list(image_bytes), dtype=np.uint8)
     img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
